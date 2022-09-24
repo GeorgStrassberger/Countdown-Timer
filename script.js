@@ -21,10 +21,10 @@ function showTime() {
     let houre = document.getElementById('houre');
     let minutes = document.getElementById('minutes');
     let seconds = document.getElementById('seconds');
-    days.innerHTML = dayCount;
-    houre.innerHTML = hourCount;
-    minutes.innerHTML = minuteCount;
-    seconds.innerHTML = secondCount;
+    days.innerHTML = `${fillUpNumber(dayCount, 2)}`;
+    houre.innerHTML = `${fillUpNumber(hourCount, 2)}`;
+    minutes.innerHTML = `${fillUpNumber(minuteCount, 2)}`;
+    seconds.innerHTML = `${fillUpNumber(secondCount, 2)}`;
 
     if (timeDifference < 0) {
         clearInterval(countdown);
@@ -33,4 +33,9 @@ function showTime() {
         let message = document.getElementById('message');
         message.innerHTML = 'Los gehts!';
     }
+}
+
+
+function fillUpNumber(num, targetLength) {
+    return num.toString().padStart(targetLength, 0);
 }
