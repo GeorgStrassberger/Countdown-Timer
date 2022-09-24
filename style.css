@@ -1,18 +1,19 @@
 * {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu', sans-serif;
     font-style: normal;
-    color: rgb(18, 14, 226);
+    color: #ffffff;
+}
+
+.d-none {
+    display: none !important;
 }
 
 body {
     height: 100vh;
-    background-image: url(/img/Ueberblick-Luftbild_1920x800-px.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 100%;
     background-color: blanchedalmond;
     display: flex;
     flex-direction: column;
@@ -20,7 +21,93 @@ body {
     align-items: center;
 }
 
-h1,
-div {
-    background-color: beige;
+h1 {
+    margin-bottom: 24px;
+    text-align: center;
+    font-size: 60px;
+}
+
+.container {
+    display: flex;
+    row-gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: rgb(0, 0, 0);
+    /* Fallback color */
+    background: rgba(0, 0, 0, 0.5);
+    /* Black background with 0.5 opacity */
+    padding: 20px;
+}
+
+.container .image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.time-content {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.time-content .time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time .number,
+.time .text {
+    font-weight: 500;
+}
+
+.time .number {
+    font-size: 80px;
+}
+
+.time .text {
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+#message {
+    font-size: 120px;
+    text-align: center;
+    color: goldenrod;
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        margin-bottom: 16px;
+        font-size: 40px;
+    }
+    .time .text {
+        font-size: 16px;
+    }
+    .time .number {
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .container {
+        padding: 0;
+    }
+    h1 {
+        margin-bottom: 16px;
+        font-size: 40px;
+    }
+    .time .text {
+        font-size: 12px;
+    }
+    .time .number {
+        font-size: 30px;
+    }
 }
