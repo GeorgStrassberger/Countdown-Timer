@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    color: rgb(18, 14, 226);
+}
+
+body {
+    height: 100vh;
+    background-image: url(/img/Ueberblick-Luftbild_1920x800-px.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,
+div {
+    background-color: beige;
+}
